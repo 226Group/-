@@ -33,7 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(511, 120);
+            this.button2.Location = new System.Drawing.Point(511, 110);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(227, 70);
             this.button2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.exit.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exit.Location = new System.Drawing.Point(511, 288);
+            this.exit.Location = new System.Drawing.Point(511, 262);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(227, 70);
             this.exit.TabIndex = 2;
@@ -81,23 +81,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button3
+            // button5
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(511, 196);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 70);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Обработка чисел";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(511, 186);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(227, 70);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Обработка чисел";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 382);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.button2);
@@ -116,7 +116,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }
 

@@ -29,7 +29,7 @@ namespace Переходы_между_формами
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            // Получаем строку из textBox1 и разбиваем её на массив чисел
+            
             string input = textBox1.Text;
             if (string.IsNullOrWhiteSpace(input))
             {
@@ -54,37 +54,34 @@ namespace Переходы_между_формами
             // Очищаем ListBox перед выводом результата
             listBoxResults.Items.Clear();
 
-            // Проверяем, какой RadioButton выбран и выполняем соответствующее вычисление
+            // выбранный radiobutton
             if (radioButtonMin.Checked)
             {
                 double min = numbers.Min();
-                listBoxResults.Items.Add($"Минимальное значение: {min}");
+                listBoxResults.Items.Add($"{min}");
             }
             else if (radioButtonMax.Checked)
             {
                 double max = numbers.Max();
-                listBoxResults.Items.Add($"Максимальное значение: {max}");
+                listBoxResults.Items.Add($"{max}");
             }
             else if (radioButtonAvg.Checked)
             {
                 double avg = numbers.Average();
-                listBoxResults.Items.Add($"Среднее значение: {avg}");
+                listBoxResults.Items.Add($"{avg}");
             }
             else if (radioButtonSum.Checked)
             {
                 double sum = numbers.Sum();
-                listBoxResults.Items.Add($"Сумма: {sum}");
-            }
-            else
-            {
-                MessageBox.Show("Выберите действие для вычисления.");
+                listBoxResults.Items.Add($"{sum}");
             }
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void buttonBack_Click_1(object sender, EventArgs e)
         {
-            // Логика для кнопки "Назад" (например, закрыть форму или вернуться на предыдущий экран)
-            this.Close(); // Закрывает текущее окно
+            Form1 main = new Form1();
+            main.Show();
+            Hide();
         }
     }
 }

@@ -50,9 +50,9 @@ namespace Переходы_между_формами
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4(this);
-            form4.Show();
-            this.Hide();
+            Form4 main = new Form4();
+            main.Show();
+            Hide();
         }
     }
 }

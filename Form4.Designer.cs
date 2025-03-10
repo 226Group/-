@@ -44,10 +44,11 @@
             // 
             this.buttonBack.Location = new System.Drawing.Point(578, 325);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(94, 47);
+            this.buttonBack.Size = new System.Drawing.Size(94, 37);
             this.buttonBack.TabIndex = 0;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click_1);
             // 
             // radioButtonMin
             // 
@@ -128,9 +129,9 @@
             // 
             // buttonCalculate
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(374, 313);
+            this.buttonCalculate.Location = new System.Drawing.Point(284, 279);
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(94, 47);
+            this.buttonCalculate.Size = new System.Drawing.Size(193, 53);
             this.buttonCalculate.TabIndex = 9;
             this.buttonCalculate.Text = "Вычислить";
             this.buttonCalculate.UseVisualStyleBackColor = true;

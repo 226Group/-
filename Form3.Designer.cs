@@ -108,9 +108,9 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(668, 21);
+            this.button1.Location = new System.Drawing.Point(668, 81);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 23);
+            this.button1.Size = new System.Drawing.Size(168, 43);
             this.button1.TabIndex = 7;
             this.button1.Text = "Заполнить массив";
             this.button1.UseVisualStyleBackColor = true;
@@ -120,9 +120,9 @@
             // 
             this.buttonSumInRow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSumInRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSumInRow.Location = new System.Drawing.Point(668, 71);
+            this.buttonSumInRow.Location = new System.Drawing.Point(668, 130);
             this.buttonSumInRow.Name = "buttonSumInRow";
-            this.buttonSumInRow.Size = new System.Drawing.Size(168, 23);
+            this.buttonSumInRow.Size = new System.Drawing.Size(168, 43);
             this.buttonSumInRow.TabIndex = 8;
             this.buttonSumInRow.Text = "Минимум в строке";
             this.buttonSumInRow.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(743, 286);
+            this.button3.Location = new System.Drawing.Point(712, 265);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(106, 44);
             this.button3.TabIndex = 9;
             this.button3.Text = "Назад";
             this.button3.UseVisualStyleBackColor = true;
@@ -144,9 +144,9 @@
             // 
             this.buttonCountEvenNumbers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCountEvenNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCountEvenNumbers.Location = new System.Drawing.Point(668, 112);
+            this.buttonCountEvenNumbers.Location = new System.Drawing.Point(668, 30);
             this.buttonCountEvenNumbers.Name = "buttonCountEvenNumbers";
-            this.buttonCountEvenNumbers.Size = new System.Drawing.Size(168, 26);
+            this.buttonCountEvenNumbers.Size = new System.Drawing.Size(168, 43);
             this.buttonCountEvenNumbers.TabIndex = 10;
             this.buttonCountEvenNumbers.Text = "Количество четных";
             this.buttonCountEvenNumbers.UseVisualStyleBackColor = true;

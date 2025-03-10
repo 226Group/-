@@ -81,7 +81,7 @@ namespace Переходы_между_формами
         {
             Form1 main = new Form1();
             main.Show();
-            Hide();
+            Close();
         }
     }
 }

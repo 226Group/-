@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Переходы между формами", "Переходы между формами.csproj", "{48C49502-C95C-4DFC-89F4-B495DBC313CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication1", "TestApplication1\TestApplication1.csproj", "{27FBD8EA-716D-46C9-9BED-27D34DFE0B2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{48C49502-C95C-4DFC-89F4-B495DBC313CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48C49502-C95C-4DFC-89F4-B495DBC313CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48C49502-C95C-4DFC-89F4-B495DBC313CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FBD8EA-716D-46C9-9BED-27D34DFE0B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FBD8EA-716D-46C9-9BED-27D34DFE0B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FBD8EA-716D-46C9-9BED-27D34DFE0B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FBD8EA-716D-46C9-9BED-27D34DFE0B2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

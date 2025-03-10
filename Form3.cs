@@ -36,7 +36,7 @@ namespace Переходы_между_формами
         {
 
         }
-    int[,] array = Array.e
+    int[,] array = new int[0,0];
         private void buttonFillArray_Click(object sender, EventArgs e)
         {
             int rows = (int)numericUpDown1.Value;
@@ -53,10 +53,10 @@ namespace Переходы_между_формами
                 }
             }
 
-            DisplayArray(array);
+            DisplayArray();
         }
 
-        private void DisplayArray(int[,] array)
+        private void DisplayArray()
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
@@ -85,7 +85,7 @@ namespace Переходы_между_формами
 
         private void buttonCountEvenNumbers_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count == 0)
+            if (array.GetLength() == 0)
             {
                 MessageBox.Show("Таблица пуста. Заполните массив сначала.");
                 return;
@@ -95,71 +95,51 @@ namespace Переходы_между_формами
             {
                 dataGridView1.Columns.Add("CountEvenNumbers", "Количество четных");
             }
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            
+            for (int i = 0; i < array.GetLength(0); i++)
             {
                 int count = 0;
-                bool isEmptyRow = true; // проверка пустой строки
 
-                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if (dataGridView1.Columns[j].HeaderText.StartsWith("Столбец")) // Проверка заголовка
+                    if (array[i,j] % 2 == 0)
                     {
-                        if (int.TryParse(dataGridView1.Rows[i].Cells[j].Value?.ToString(), out int cellValue))
-                        {
-                            isEmptyRow = false; // Строка не пустая
-                            if (cellValue % 2 == 0)
-                            {
-                                count++;
-                            }
-                        }
+                        count++;
                     }
                 }
 
-                if (!isEmptyRow) // Если строка не пустая пишем результат
-                {
+                // if (! dataGridView1.Rows[i].isNull?) // Если строка не пустая пишем результат
+                // {
                     dataGridView1.Rows[i].Cells["CountEvenNumbers"].Value = count;
-                }
-                else
-                {
-                    dataGridView1.Rows[i].Cells["CountEvenNumbers"].Value = "Пустая строка";
-                }
+                // }
             }
         }
 
         private void buttonSumInRow_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count == 0)
+            if (array.GetLength() == 0)
             {
                 MessageBox.Show("Таблица пуста. Заполните массив сначала.");
                 return;
             }
 
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
                 int min = int.MaxValue; // мин = макс значение
-                bool isEmptyRow = true; // проверка пустой строки
 
-                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if (dataGridView1.Columns[j].HeaderText.StartsWith("Столбец")) // Проверка заголовка
+                    if (cellValue < min)
                     {
-                        if (int.TryParse(dataGridView1.Rows[i].Cells[j].Value?.ToString(), out int cellValue))
-                        {
-                            isEmptyRow = false; // Строка не пустая
-                            if (cellValue < min)
-                            {
-                                min = cellValue; // Обновляем минимум
-                            }
-                        }
+                        min = cellValue; // Обновляем минимум
                     }
                 }
 
-                if (!isEmptyRow) // Если строка не пустая  пишем результат
-                {
-                    dataGridView1.Rows[i].Cells["MinInRow"].Value = min;
-                }
-
+                // if (! dataGridView1.Rows[i].isNull?) // Если строка не пустая пишем результат
+                // {
+                    dataGridView1.Rows[i].Cells["CountEvenNumbers"].Value = count;
+                // }
+            
             }
         }
 
@@ -168,49 +148,6 @@ namespace Переходы_между_формами
 
         }
 
-        private void buttonCountEvenNumbers_Click_1(object sender, EventArgs e)
-        {
-            if (dataGridView1.Rows.Count == 0)
-            {
-                MessageBox.Show("Таблица пуста. Заполните массив сначала.");
-                return;
-            }
-
-            // проверка есть ли "CountEvenNumbers"
-            if (!dataGridView1.Columns.Contains("CountEvenNumbers"))
-            {
-                dataGridView1.Columns.Add("CountEvenNumbers", "Количество четных");
-            }
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                int count = 0;
-                bool isEmptyRow = true; // Флаг для проверки пустой строки
-
-                for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                {
-                    if (dataGridView1.Columns[j].HeaderText.StartsWith("Столбец")) // Проверка заголовка
-                    {
-                        if (int.TryParse(dataGridView1.Rows[i].Cells[j].Value?.ToString(), out int cellValue))
-                        {
-                            isEmptyRow = false; // Строка не пустая
-                            if (cellValue % 2 == 0)
-                            {
-                                count++;
-                            }
-                        }
-                    }
-                }
-
-                if (!isEmptyRow) // Если строка не пустая пишем результат
-                {
-                    dataGridView1.Rows[i].Cells["CountEvenNumbers"].Value = count;
-                }
-
-            }
-
-
-        }
     }
 
 }

@@ -36,7 +36,7 @@ namespace Переходы_между_формами
         {
 
         }
-
+    int[,] array = Array.e
         private void buttonFillArray_Click(object sender, EventArgs e)
         {
             int rows = (int)numericUpDown1.Value;

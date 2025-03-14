@@ -36,13 +36,15 @@ namespace Переходы_между_формами
         {
 
         }
+
+
     int[,] array = new int[0,0];
         private void buttonFillArray_Click(object sender, EventArgs e)
         {
             int rows = (int)numericUpDown1.Value;
             int cols = (int)numericUpDown2.Value;
-
-            int[,] array = new int[rows, cols];
+            
+            array = new int[rows, cols];
             Random rand = new Random();
 
             for (int i = 0; i < rows; i++)
@@ -52,6 +54,22 @@ namespace Переходы_между_формами
                     array[i, j] = rand.Next(100); 
                 }
             }
+            //Array.Copy(array,new_array,);
+            //better type systems eliminate runtime errors faster
+
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < cols; j++)
+            //    {
+            //        int? x = (int?)array.GetValue(i, j);
+            //        if (x.HasValue)
+            //        {
+            //            new_array.SetValue(x.Value, new int[] { i, j });
+            //        }
+            //    }
+            //}
+            //this.array = new_array;
+
 
             DisplayArray();
         }
@@ -66,8 +84,6 @@ namespace Переходы_между_формами
                 dataGridView1.Columns.Add($"Column{j}", $"Столбец {j + 1}");
             }
 
-            // Минимум в строке
-            dataGridView1.Columns.Add("MinInRow", "Минимум в строке");
 
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -85,16 +101,12 @@ namespace Переходы_между_формами
 
         private void buttonCountEvenNumbers_Click(object sender, EventArgs e)
         {
-            if (array.GetLength() == 0)
+            if (array.Length == 0)
             {
                 MessageBox.Show("Таблица пуста. Заполните массив сначала.");
                 return;
             }
 
-            if (!dataGridView1.Columns.Contains("CountEvenNumbers"))
-            {
-                dataGridView1.Columns.Add("CountEvenNumbers", "Количество четных");
-            }
             
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -108,16 +120,17 @@ namespace Переходы_между_формами
                     }
                 }
 
-                // if (! dataGridView1.Rows[i].isNull?) // Если строка не пустая пишем результат
-                // {
-                    dataGridView1.Rows[i].Cells["CountEvenNumbers"].Value = count;
-                // }
+            if (!dataGridView1.Columns.Contains("CountEvenNumbers"))
+            {
+                dataGridView1.Columns.Add("CountEvenNumbers", "Количество четных");
+            }
+            dataGridView1.Rows[i].Cells["CountEvenNumbers"].Value = count;
             }
         }
 
         private void buttonSumInRow_Click(object sender, EventArgs e)
         {
-            if (array.GetLength() == 0)
+            if (array.Length == 0)
             {
                 MessageBox.Show("Таблица пуста. Заполните массив сначала.");
                 return;
@@ -125,20 +138,24 @@ namespace Переходы_между_формами
 
             for (int i = 0; i < array.GetLength(0); i++)
             {
+
                 int min = int.MaxValue; // мин = макс значение
 
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    if (cellValue < min)
+                    if (array[i,j] < min)
                     {
-                        min = cellValue; // Обновляем минимум
+                        min = array[i, j]; // Обновляем минимум
                     }
                 }
 
-                // if (! dataGridView1.Rows[i].isNull?) // Если строка не пустая пишем результат
-                // {
-                    dataGridView1.Rows[i].Cells["CountEvenNumbers"].Value = count;
-                // }
+                if (!dataGridView1.Columns.Contains("MinInRow"))
+                {
+                    dataGridView1.Columns.Add("MinInRow", "Минимальное число");
+                }
+
+                dataGridView1.Rows[i].Cells["MinInRow"].Value = min;
+
             
             }
         }

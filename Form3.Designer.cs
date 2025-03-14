@@ -150,7 +150,7 @@
             this.buttonCountEvenNumbers.TabIndex = 10;
             this.buttonCountEvenNumbers.Text = "Количество четных";
             this.buttonCountEvenNumbers.UseVisualStyleBackColor = true;
-            this.buttonCountEvenNumbers.Click += new System.EventHandler(this.buttonCountEvenNumbers_Click_1);
+            this.buttonCountEvenNumbers.Click += new System.EventHandler(this.buttonCountEvenNumbers_Click);
             // 
             // Form3
             // 
